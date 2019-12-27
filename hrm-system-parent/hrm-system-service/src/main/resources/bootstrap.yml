@@ -1,0 +1,11 @@
+spring:
+  application:
+      name: ZUUL-GATEWAY
+  cloud:
+    config:
+      name: application-zuul
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+  profiles:
+    active: dev

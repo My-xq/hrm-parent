@@ -1,0 +1,17 @@
+spring:
+  application:
+      name: ZUUL-GATEWAY
+  cloud:
+    config:
+      name: application-zuul
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+  profiles:
+    active: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
